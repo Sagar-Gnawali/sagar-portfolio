@@ -1,0 +1,22 @@
+.blink {
+  display: inline-block;
+  width: 1ch; 
+  animation: blink-animation 1s steps(2, start) infinite;
+}
+
+
+.typewriter {
+  font-family: "Courier New", Courier, monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+}
+
+@keyframes blink-animation {
+  0%, 50% {
+    opacity: 1;
+  }
+  50.1%, 100% {
+    opacity: 0;
+  }
+}

@@ -1,10 +1,17 @@
+import {  BrowserRouter } from "react-router-dom";
+import Footer from "./apps/components/footer";
 import "./App.css";
-import UnderCons from "./assets/under-made.svg";
+
+import Navigation from "./apps/navigation/nagivation";
+import NavRouter from "./apps/routes";
 function App() {
   return (
     <>
-      <img src={UnderCons} title="under-cons" />
-      <p>Bandai cha.....</p>
+      <BrowserRouter>
+        <Navigation />
+        <NavRouter/>
+      </BrowserRouter>
+      <Footer />
     </>
   );
 }

@@ -4,15 +4,6 @@ import tailwindcss from "tailwindcss";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/sagar-portfolio/",
-  build: {
-    outDir: "dist",
-  },
-  server: {
-    fs: {
-      strict: true,
-    },
-  },
   css: {
     postcss: {
       // @ts-ignore

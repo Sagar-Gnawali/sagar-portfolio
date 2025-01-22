@@ -1,4 +1,4 @@
-import {  BrowserRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import Footer from "./apps/components/footer";
 import "./App.css";
 
@@ -9,9 +9,9 @@ function App() {
     <>
       <BrowserRouter>
         <Navigation />
-        <NavRouter/>
+        <NavRouter />
+        <Footer />
       </BrowserRouter>
-      <Footer />
     </>
   );
 }

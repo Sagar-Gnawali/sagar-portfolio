@@ -12,7 +12,6 @@ export default function TypewriterEffect({
     let index = 0;
     const interval = setInterval(() => {
       if (index < text.length) {
-        console.log(index);
         setDisplayedText((prev) =>  {
           return prev + text.charAt(index) ;
         });

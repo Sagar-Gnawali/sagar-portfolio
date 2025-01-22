@@ -5,6 +5,7 @@ import GreaterThan from "../../assets/icons/greater";
 import HomeIcon from "../../assets/icons/home";
 import FileIcon from "../../assets/icons/file";
 import TypewriterEffect from "../components/type-writer";
+
 export default function Navigation() {
   const location = useLocation();
   let terminal = location.pathname.split("/")[1];
@@ -26,7 +27,7 @@ export default function Navigation() {
           <span className="mr-1">{terminal ? <FileIcon /> : <HomeIcon />}</span>
           <p className="w-[100px] font-semibold">
             {TypewriterEffect({ text: ` ~/${terminal}`, speed: 50 })}
-            <span className="blink">|</span>
+            <span className="blink ml-1">|</span>
           </p>{" "}
         </div>
       </NavLink>

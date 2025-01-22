@@ -41,8 +41,8 @@ export default function Work() {
     },
   ];
   return (
-    <Container className="">
-      <div className="">
+    <Container>
+      <div>
         <p className="text-2xl leading-1 mb-3 capitalize ml-1">experience</p>
         {workExperience.map((it, index) => (
           <TimeLine

@@ -13,7 +13,7 @@ export default function TimeLine({
   return (
     <>
       <div className="flex gap-x-3 relative group rounded-lg hover:bg-gray-100 dark:hover:bg-grey/10">
-        <a className="z-[1] absolute inset-0" href="#"></a>
+        {/* <a className="z-[1] absolute inset-0" href="#"></a> */}
         <div className="relative last:after:hidden after:absolute after:top-0 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700 dark:group-hover:after:bg-neutral-600">
           <div className="relative z-10 size-7 flex justify-center items-center">
             <div className="size-2 rounded-full bg-white border-2 border-gray-300 group-hover:border-gray-600 dark:bg-neutral-800 dark:border-neutral-600 dark:group-hover:border-neutral-600"></div>
@@ -25,9 +25,9 @@ export default function TimeLine({
               <span> {company.name}</span>
               <span> {company.duration} </span>
             </div>
-            <h3 className="text-xs font-medium capitalize text-gray-500 dark:text-neutral-00 flex justify-between">
+            <p className="text-xs font-medium capitalize text-gray-500 dark:text-neutral-00 flex justify-between">
               <span> {company.role} </span>
-            </h3>
+            </p>
           </h3>
           <button
             type="button"

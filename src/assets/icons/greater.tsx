@@ -2,7 +2,7 @@
 export default function GreaterThan() {
   return (
     <svg
-      enable-background="new 0 0 256 256"
+      enableBackground="new 0 0 256 256"
       height="256px"
       id="Layer_1"
       version="1.1"

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 export default function Home() {
   const navigation = useNavigate();
   const handleDownload = () => {
-    const resumeUrl = "/public/sagar-gnawali.pdf";
+    const resumeUrl = "/sagar-gnawali.pdf";
     const link = document.createElement("a");
     link.href = resumeUrl;
     link.download = "Sagar Gnawali.pdf";

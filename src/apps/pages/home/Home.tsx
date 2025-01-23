@@ -10,7 +10,7 @@ export default function Home() {
     link.click();
   };
   return (
-    <Container className="">
+    <Container >
       <div className="flex my-5 tems-center self-center m-auto justify-center text-center ">
         <div>
           <div className="text-5xl font-normal leading-tight">

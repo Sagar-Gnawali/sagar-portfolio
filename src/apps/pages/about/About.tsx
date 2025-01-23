@@ -10,7 +10,7 @@ import {
 
 export default function About() {
   return (
-    <Container className="">
+    <Container >
       <div>
         <div className="mb-5">
           <p className="text-3xl leading-1  ">Hi, I'm Sagar Gnawali</p>

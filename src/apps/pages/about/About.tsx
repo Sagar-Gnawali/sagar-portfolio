@@ -27,9 +27,15 @@ export default function About() {
           challenging role.
         </p>
         <p className="leading-1 mt-2">
-          In my free time, I enjoy reading books. These interests allow me to
-          decompress and clear my mind, so I can come back to coding with a
-          fresh perspective.
+          Outside of coding and programming, I enjoy spending my free time
+          reading books. I aim to read at least one book a month to broaden my
+          knowledge and gain new perspectives. I also love trekking and
+          exploring nature, which fuels my passion for photography. You can
+          check out some of the pictures I have clicked on my{" "}
+          <a className="text-blue-600" href="https://www.pexels.com/@sagar-gnawali-1389137/" target="_blank">
+            pexels profile
+          </a>
+          .
         </p>
       </div>
       {/* Skills Section */}

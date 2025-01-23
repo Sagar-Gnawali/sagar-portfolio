@@ -16,8 +16,8 @@ export default function About() {
           <p className="text-3xl leading-1  ">Hi, I'm Sagar Gnawali</p>
           <span className="font-light text-gray-600">
             a Software Developer trying to make the world a bit more functional.
-            Based in <b>Nepal.</b>
           </span>
+          🇳🇵
         </div>
         <p className="leading-1">
           Highly motivated and results-driven software developer with 3.5 years

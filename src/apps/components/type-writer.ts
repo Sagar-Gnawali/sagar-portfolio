@@ -1,22 +1,21 @@
 import { useState, useEffect } from "react";
-
+type TypeWriterProps = {
+  text: string;
+  speed: number;
+};
 export default function TypewriterEffect({
   text = "",
   speed = 100,
-}: {
-  text: string;
-  speed: number;
-}):string {
+}: TypeWriterProps): string {
   const [displayedText, setDisplayedText] = useState("");
   useEffect(() => {
     let index = 0;
     const interval = setInterval(() => {
       if (index < text.length) {
-        setDisplayedText((prev) =>  {
-          return prev + text.charAt(index) ;
+        setDisplayedText((prev) => {
+          return prev + text.charAt(index);
         });
-          index++;
-
+        index++;
       } else {
         clearInterval(interval);
       }
@@ -28,5 +27,4 @@ export default function TypewriterEffect({
     };
   }, [text, speed]);
   return displayedText;
-
 }

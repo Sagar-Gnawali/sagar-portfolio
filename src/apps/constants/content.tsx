@@ -16,6 +16,9 @@ import { SiMysql } from "react-icons/si";
 import { BsFiletypeSql } from "react-icons/bs";
 import { LiaDocker } from "react-icons/lia";
 import { LiaSourcetree } from "react-icons/lia";
+import { FiGitlab } from "react-icons/fi";
+import { BiLogoGraphql } from "react-icons/bi";
+
 
 export const dataBase = [
   {
@@ -52,6 +55,10 @@ export const skills = [
     name: "TypeScript",
     icon: <TbBrandTypescript size={20} />,
   },
+  {
+    name: "GraphQL",
+    icon: <BiLogoGraphql size={20} />,
+  },
 ];
 
 export const versionControl = [
@@ -62,6 +69,10 @@ export const versionControl = [
   {
     name: "GitHub",
     icon: <LiaGithubSquare size={25} />,
+  },
+  {
+    name: "GitLab",
+    icon: <FiGitlab size={25} />,
   },
   {
     name: "BitBucket",

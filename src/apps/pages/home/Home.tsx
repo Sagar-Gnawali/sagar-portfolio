@@ -1,5 +1,6 @@
 import Container from "../../components/container";
 import { useNavigate } from "react-router-dom";
+import Profile from "./../../../assets/profile.jpg";
 export default function Home() {
   const navigation = useNavigate();
   const handleDownload = () => {
@@ -10,10 +11,17 @@ export default function Home() {
     link.click();
   };
   return (
-    <Container >
-      <div className="flex my-5 tems-center self-center m-auto justify-center text-center ">
+    <Container>
+      <div className="flex my-5 items-center self-center m-auto justify-center text-center ">
         <div>
-          <div className="text-5xl font-normal leading-tight">
+          <div className="w-full flex justify-center items-center my-4">
+            <img
+              src={Profile}
+              alt="Profile-picture"
+              className="w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] object-cover object-center  rounded-full border-4 border-blue-400"
+            />
+          </div>
+          <div className="text-4xl sm:text-5xl font-normal leading-tight">
             <span className="bg-gradient-to-r from-blue-300 via-blue-400 to-blue-500 inline-block text-transparent bg-clip-text">
               {" "}
               Software
@@ -22,7 +30,7 @@ export default function Home() {
             <br />
             <span>
               about{" "}
-              <span className="bg-gradient-to-r from-orange-300 via-orange-400 to-orange-500 inline-block text-transparent bg-clip-text">
+              <span className="bg-gradient-to-r leading-normal from-orange-300 via-orange-400 to-orange-500 inline-block text-transparent bg-clip-text">
                 photography
               </span>{" "}
               and{" "}

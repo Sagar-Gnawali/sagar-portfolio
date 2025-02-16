@@ -17,7 +17,7 @@ export default function Home() {
     <Container>
       <div className="flex my-5 items-center self-center m-auto justify-center text-center ">
         <div>
-          <div className="w-full flex justify-center items-center my-4">
+          <div className="w-full flex justify-center items-center my-5">
             <img
               src={Profile}
               alt="Profile-picture"
@@ -42,10 +42,10 @@ export default function Home() {
               </span>
             </span>
           </div>
-          <div className="w-full mt-2">
+          <div className="w-full mt-4 mb-6">
             <SocialLink SocialData={socialLinks} />
           </div>
-          <div className="mt-5 flex justify-center gap-5">
+          <div className="flex justify-center gap-5">
             <button
               onClick={() => {
                 navigation("/about");

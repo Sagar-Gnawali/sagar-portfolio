@@ -1,6 +1,9 @@
-import Container from "../../components/container";
 import { useNavigate } from "react-router-dom";
-import Profile from "./../../../assets/profile.jpg";
+import Profile from "@assets/profile.jpg";
+import Container from "@components/container";
+import { SocialLink } from "@components/social-links";
+import { socialLinks } from "@constants/content";
+
 export default function Home() {
   const navigation = useNavigate();
   const handleDownload = () => {
@@ -39,7 +42,10 @@ export default function Home() {
               </span>
             </span>
           </div>
-          <div className="mt-10 flex justify-center gap-5">
+          <div className="w-full mt-2">
+            <SocialLink SocialData={socialLinks} />
+          </div>
+          <div className="mt-5 flex justify-center gap-5">
             <button
               onClick={() => {
                 navigation("/about");

@@ -1,16 +1,16 @@
-import Container from "../../components/container";
-import GridContainer from "../../components/grid-container";
-import { EducationTimeLine } from "../../components/education-timeline";
+import Container from "@components/container";
+import GridContainer from "@components/grid-container";
+import { EducationTimeLine } from "@components/education-timeline";
 import {
   dataBase,
   otherTools,
   skills,
   versionControl,
-} from "../../constants/content";
+} from "@constants/content";
 
 export default function About() {
   return (
-    <Container >
+    <Container>
       <div>
         <div className="mb-5">
           <p className="text-3xl leading-1  ">Hi, I'm Sagar Gnawali</p>
@@ -32,7 +32,11 @@ export default function About() {
           knowledge and gain new perspectives. I also love trekking and
           exploring nature, which fuels my passion for photography. You can
           check out some of the pictures I have clicked on my{" "}
-          <a className="text-blue-600" href="https://www.pexels.com/@sagar-gnawali-1389137/" target="_blank">
+          <a
+            className="text-blue-600"
+            href="https://www.pexels.com/@sagar-gnawali-1389137/"
+            target="_blank"
+          >
             pexels profile
           </a>
           .

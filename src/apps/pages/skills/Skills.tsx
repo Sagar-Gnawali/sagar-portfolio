@@ -1,4 +1,4 @@
-import Container from "../../components/container";
+import Container from "@components/container";
 
 export default function Skills() {
   return (
@@ -17,7 +17,7 @@ export default function Skills() {
           have clicked. These interests allow me to decompress and clear my
           mind, so I can come back to coding with a fresh perspective.
         </p>
-        
+
         <b>Frameworks</b>
         <div></div>
       </div>

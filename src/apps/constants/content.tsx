@@ -1,25 +1,34 @@
-import { FaReact } from "react-icons/fa";
+import { FaReact, FaSass } from "react-icons/fa";
 import { FaGitAlt } from "react-icons/fa6";
-import { TbBrandBitbucket } from "react-icons/tb";
-import { LiaGithubSquare } from "react-icons/lia";
-import { SiPostman } from "react-icons/si";
-import { SiJira } from "react-icons/si";
-import { LiaConfluence } from "react-icons/lia";
-import { SiClickup } from "react-icons/si";
+import {
+  TbBrandBitbucket,
+  TbBrandNextjs,
+  TbBrandTypescript,
+  TbBrandTailwind,
+} from "react-icons/tb";
+import {
+  LiaGithubSquare,
+  LiaConfluence,
+  LiaSourcetree,
+  LiaDocker,
+} from "react-icons/lia";
+import {
+  SiZoho,
+  SiPostgresql,
+  SiPostman,
+  SiClickup,
+  SiJira,
+  SiMysql,
+} from "react-icons/si";
+
 import { ImHtmlFive2 } from "react-icons/im";
-import { SiZoho } from "react-icons/si";
-import { TbBrandNextjs } from "react-icons/tb";
-import { TbBrandTypescript } from "react-icons/tb";
 import { RiJavascriptLine } from "react-icons/ri";
-import { SiPostgresql } from "react-icons/si";
-import { SiMysql } from "react-icons/si";
 import { BsFiletypeSql } from "react-icons/bs";
-import { LiaDocker } from "react-icons/lia";
-import { LiaSourcetree } from "react-icons/lia";
 import { FiGitlab } from "react-icons/fi";
 import { BiLogoGraphql } from "react-icons/bi";
 
-
+import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
+import { MdEmail } from "react-icons/md";
 export const dataBase = [
   {
     name: "MySql",
@@ -48,8 +57,12 @@ export const skills = [
     icon: <RiJavascriptLine size={23} />,
   },
   {
-    name: "HTML, CSS, SASS",
+    name: "HTML, CSS",
     icon: <ImHtmlFive2 size={20} />,
+  },
+  {
+    name: "SASS",
+    icon: <FaSass size={22} />,
   },
   {
     name: "TypeScript",
@@ -58,6 +71,10 @@ export const skills = [
   {
     name: "GraphQL",
     icon: <BiLogoGraphql size={20} />,
+  },
+  {
+    name: "Tailwind CSS",
+    icon: <TbBrandTailwind size={22} />,
   },
 ];
 
@@ -107,5 +124,14 @@ export const otherTools = [
   {
     name: "Source Tree",
     icon: <LiaSourcetree size={25} />,
+  },
+];
+
+export const socialLinks = [
+  { icon: <MdEmail size={22} />, url: "mailto:sagargnawali2@gmail.com" },
+  { icon: <IoLogoGithub size={22} />, url: "https://github.com/Sagar-Gnawali" },
+  {
+    icon: <IoLogoLinkedin size={22} />,
+    url: "https://www.linkedin.com/in/sagar-gnawali-41b500190",
   },
 ];

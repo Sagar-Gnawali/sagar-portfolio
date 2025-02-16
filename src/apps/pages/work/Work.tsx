@@ -1,5 +1,5 @@
-import Container from "../../components/container";
-import TimeLine from "../../components/timeline";
+import Container from "@components/container";
+import TimeLine from "@components/timeline";
 export default function Work() {
   const workExperience = [
     {

@@ -27,6 +27,8 @@ import { BsFiletypeSql } from "react-icons/bs";
 import { FiGitlab } from "react-icons/fi";
 import { BiLogoGraphql } from "react-icons/bi";
 
+import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
+import { MdEmail } from "react-icons/md";
 export const dataBase = [
   {
     name: "MySql",
@@ -122,5 +124,14 @@ export const otherTools = [
   {
     name: "Source Tree",
     icon: <LiaSourcetree size={25} />,
+  },
+];
+
+export const socialLinks = [
+  { icon: <MdEmail size={22} />, url: "mailto:sagargnawali2@gmail.com" },
+  { icon: <IoLogoGithub size={22} />, url: "https://github.com/Sagar-Gnawali" },
+  {
+    icon: <IoLogoLinkedin size={22} />,
+    url: "https://www.linkedin.com/in/sagar-gnawali-41b500190",
   },
 ];

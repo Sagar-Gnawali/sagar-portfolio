@@ -8,9 +8,11 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Navigation />
-        <NavRouter />
-        <Footer />
+        <div className="flex flex-col min-h-screen">
+          <Navigation />
+          <NavRouter />
+          <Footer />
+        </div>
       </BrowserRouter>
     </>
   );

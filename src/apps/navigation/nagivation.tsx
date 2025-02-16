@@ -1,10 +1,10 @@
 import { NavLink, useLocation } from "react-router-dom";
 
-import MonitorSvg from "../../assets/icons";
-import GreaterThan from "../../assets/icons/greater";
-import HomeIcon from "../../assets/icons/home";
-import FileIcon from "../../assets/icons/file";
-import TypewriterEffect from "../components/type-writer";
+import MonitorSvg from "@assets/icons";
+import GreaterThan from "@assets/icons/greater";
+import HomeIcon from "@assets/icons/home";
+import FileIcon from "@assets/icons/file";
+import TypewriterEffect from "@components/type-writer";
 
 export default function Navigation() {
   const location = useLocation();

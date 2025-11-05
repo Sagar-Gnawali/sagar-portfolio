@@ -60,7 +60,7 @@ export default function About() {
 
       {/* DataBase */}
       <div>
-        <p className="font-semibold  mt-4 capitalize">DataBase</p>
+        <p className="font-semibold  mt-4 capitalize">Database</p>
         <div className="px-1">
           <GridContainer GridData={dataBase} />
         </div>

@@ -20,26 +20,20 @@ export default function About() {
           🇳🇵
         </div>
         <p className="leading-1">
-          Highly motivated and results-driven software developer with 3.5 years
-          of experience in the software development lifecycle. Eager to leverage
-          technical expertise, creativity, and a passion for continuous learning
-          to contribute effectively and make a meaningful impact in a
-          challenging role.
+          It&prime;s been 4 years of making computers do what I want. Sometimes
+          they listen, sometimes they don't... but we always figure it out.
         </p>
         <p className="leading-1 mt-2">
-          Outside of coding and programming, I enjoy spending my free time
-          reading books. I aim to read at least one book a month to broaden my
-          knowledge and gain new perspectives. I also love trekking and
-          exploring nature, which fuels my passion for photography. You can
-          check out some of the pictures I have clicked on my{" "}
+          Outside of convincing computers to work, I read books , go trekking,
+          and take photos. Check out my{" "}
           <a
             className="text-blue-600"
             href="https://www.pexels.com/@sagar-gnawali-1389137/"
             target="_blank"
           >
             pexels profile
-          </a>
-          .
+          </a>{" "}
+          if you want to see what I do when I&prime;m not debugging.
         </p>
       </div>
       {/* Skills Section */}

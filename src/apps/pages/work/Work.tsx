@@ -4,8 +4,20 @@ export default function Work() {
   const workExperience = [
     {
       company: {
+        name: "Vynspire AI Labs",
+        duration: "Aug 2025 - Nov 2025",
+        role: "Frontend Developer",
+      },
+      contribute: [
+        "Implemented payment gateway integrations (Stripe and PayPal) in a hotel booking platform, ensuring secure and seamless checkout experiences.",
+        "Built reusable components and modules for a hotel booking system using Next.js, improving code maintainability and development efficiency.",
+        "Managed multiple environments on AWS Amplify for a hotel booking system, ensuring smooth testing and deployment workflows across development and staging environments.",
+      ],
+    },
+    {
+      company: {
         name: "Fatdog Technology Pvt.",
-        duration: "Aug 2024 - Present",
+        duration: "Aug 2024 - Mar 2025",
         role: "Frontend Developer",
       },
       contribute: [

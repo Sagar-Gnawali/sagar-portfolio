@@ -1,4 +1,4 @@
-import { FaReact, FaSass } from "react-icons/fa";
+import { FaReact, FaSass, FaTrello } from "react-icons/fa";
 import { FaGitAlt } from "react-icons/fa6";
 import {
   TbBrandBitbucket,
@@ -124,6 +124,10 @@ export const otherTools = [
   {
     name: "Source Tree",
     icon: <LiaSourcetree size={25} />,
+  },
+  {
+    name: "Trello",
+    icon: <FaTrello size={20} />,
   },
 ];
 

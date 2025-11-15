@@ -35,11 +35,6 @@ export default function About() {
           </a>{" "}
           if you want to see what I do when I&prime;m not debugging.
         </p>
-        <p className="mt-2 bg-gradient-to-r from-blue-500 via-orange-500 to-red-500 inline-block text-transparent bg-clip-text ">
-          {" "}
-          I will be relocating to London in December 2025 and am currently
-          seeking remote Frontend Developer opportunities within the UK.{" "}
-        </p>
       </div>
       {/* Skills Section */}
       <div>

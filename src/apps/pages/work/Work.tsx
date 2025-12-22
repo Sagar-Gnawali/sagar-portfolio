@@ -47,7 +47,6 @@ export default function Work() {
       },
       contribute: [
         "Developed user interfaces using React JS.",
-        "nvolved in frontend development of multi-tenant healthcare portal systems using React JS and Typescript.",
         "Maintained/improved existing codebases while conducting peer code reviews.",
       ],
     },

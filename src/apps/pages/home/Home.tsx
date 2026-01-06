@@ -29,7 +29,7 @@ export default function Home() {
               {" "}
               Software
             </span>{" "}
-            developer, passionate
+            Engineer, passionate
             <br />
             <span>
               about{" "}

@@ -15,7 +15,7 @@ export default function About() {
         <div className="mb-5">
           <p className="text-3xl leading-1  ">Hi, I'm Sagar Gnawali</p>
           <span className="font-light text-gray-600">
-            a Software Developer trying to make the world a bit more functional.
+            a Software Engineer trying to make the world a bit more functional.
           </span>
           🇳🇵
         </div>

@@ -6,7 +6,7 @@ export default function Work() {
       company: {
         name: "Vynspire AI Labs",
         duration: "Aug 2025 - Nov 2025",
-        role: "Frontend Developer",
+        role: "Software Engineer",
       },
       contribute: [
         "Implemented payment gateway integrations (Stripe and PayPal) in a hotel booking platform, ensuring secure and seamless checkout experiences.",

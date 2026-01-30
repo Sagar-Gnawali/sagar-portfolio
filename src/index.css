@@ -69,3 +69,18 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+
+.education-bullet {
+  top: 30%;
+}
+/* @media (max-width: 400px) {
+  .education-bullet {
+    top: 39%;
+  }
+} */
+
+/* @media (min-width: 768px) and (max-width: 833px) {
+  .education-bullet {
+    top: 35%;
+  }
+} */

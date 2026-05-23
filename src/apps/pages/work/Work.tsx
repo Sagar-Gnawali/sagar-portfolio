@@ -5,7 +5,7 @@ export default function Work() {
     {
       company: {
         name: 'AdTecher',
-        duration: 'Jan 2026 - Present',
+        duration: 'Jan 2026 - May 2026',
         role: 'Founding Engineer',
       },
       contribute: [

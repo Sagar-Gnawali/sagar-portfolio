@@ -16,7 +16,7 @@
   --bg: #e8eef6;
   --text: #0f172a;
   --text-muted: #475569;
-  --glass: rgba(255, 255, 255, 0.42);
+  --glass: rgba(255, 255, 255, 0.02);
   --glass-strong: rgba(255, 255, 255, 0.62);
   --glass-border: rgba(255, 255, 255, 0.72);
   --glass-inset: rgba(255, 255, 255, 0.85);
@@ -149,6 +149,7 @@ body {
     var(--glass-shadow),
     inset 0 1px 0 var(--glass-inset);
   backdrop-filter: blur(10px) saturate(100%);
+  /* background */
 }
 
 .glass::before {

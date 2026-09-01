@@ -16,7 +16,7 @@ export default function Home() {
   };
 
   return (
-    <Container>
+    <Container className="flex justify-center items-center min-h-screen">
       <div className="flex items-center justify-center text-center">
         <div className="w-full">
           <div className="profile-ring my-6">
@@ -29,7 +29,7 @@ export default function Home() {
             Engineer, passionate
             <br />
             about{" "}
-            <span className="bg-gradient-to-r from-orange-300 via-orange-400 to-orange-500 inline-block text-transparent bg-clip-text">
+            <span className="bg-gradient-to-r from-orange-300 via-orange-400 to-orange-500 inline-block text-transparent bg-clip-text leading-snug">
               photography
             </span>{" "}
             and{" "}

@@ -26,6 +26,10 @@
   --chip: rgba(255, 255, 255, 0.5);
   --accent: #2563eb;
   --accent-soft: rgba(37, 99, 235, 0.12);
+  --liquid-grid: rgba(14, 116, 144, 0.12);
+  --liquid-cyan: rgba(14, 165, 233, 0.42);
+  --liquid-amber: rgba(249, 115, 22, 0.28);
+  --liquid-vignette: rgba(15, 23, 42, 0.08);
 }
 
 :root[data-theme="dark"],
@@ -43,6 +47,10 @@ html.dark {
   --chip: rgba(255, 255, 255, 0.06);
   --accent: #7dd3fc;
   --accent-soft: rgba(125, 211, 252, 0.12);
+  --liquid-grid: rgba(125, 211, 252, 0.14);
+  --liquid-cyan: rgba(34, 211, 238, 0.48);
+  --liquid-amber: rgba(251, 146, 60, 0.36);
+  --liquid-vignette: rgba(0, 0, 0, 0.42);
 }
 
 *,
@@ -93,48 +101,63 @@ body {
   flex-direction: column;
 }
 
-.liquid-canvas,
 .liquid-fallback {
   position: fixed;
   inset: 0;
   z-index: 0;
+  overflow: hidden;
   pointer-events: none;
+  background-color: var(--bg);
 }
 
-.liquid-canvas,
-.liquid-canvas * {
-  pointer-events: none !important;
+.liquid-fallback::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--liquid-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--liquid-grid) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-position: center center;
+  box-shadow: inset 0 0 180px var(--liquid-vignette);
 }
 
-.liquid-canvas canvas {
-  display: block;
-  width: 100% !important;
-  height: 100% !important;
+.liquid-orb {
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(90px);
+  will-change: transform;
 }
 
-.liquid-fallback {
-  background:
-    radial-gradient(
-      900px circle at 18% 12%,
-      rgba(34, 211, 238, 0.28),
-      transparent 55%
-    ),
-    radial-gradient(
-      700px circle at 82% 78%,
-      rgba(251, 146, 60, 0.22),
-      transparent 50%
-    ),
-    repeating-linear-gradient(
-      90deg,
-      transparent 0 46px,
-      color-mix(in srgb, var(--accent) 12%, transparent) 46px 47px
-    ),
-    repeating-linear-gradient(
-      0deg,
-      transparent 0 46px,
-      color-mix(in srgb, var(--accent) 10%, transparent) 46px 47px
-    ),
-    var(--bg);
+.liquid-orb--cyan {
+  width: min(78vw, 980px);
+  height: min(78vw, 980px);
+  left: -22%;
+  top: -28%;
+  background: radial-gradient(circle, var(--liquid-cyan), transparent 68%);
+  animation: liquid-drift 22s ease-in-out infinite;
+}
+
+.liquid-orb--amber {
+  width: min(62vw, 820px);
+  height: min(62vw, 820px);
+  right: -16%;
+  bottom: -24%;
+  background: radial-gradient(circle, var(--liquid-amber), transparent 68%);
+  animation: liquid-drift 26s ease-in-out infinite reverse;
+}
+
+.liquid-orb--cyan-soft {
+  width: min(42vw, 520px);
+  height: min(42vw, 520px);
+  left: 18%;
+  top: 8%;
+  opacity: 0.45;
+  background: radial-gradient(circle, var(--liquid-cyan), transparent 70%);
+  animation: liquid-drift 30s ease-in-out infinite;
 }
 
 .glass {
@@ -402,6 +425,16 @@ a {
   }
 }
 
+@keyframes liquid-drift {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(4%, 3%) scale(1.06);
+  }
+}
+
 @keyframes blink-animation {
   0%,
   50% {
@@ -434,7 +467,8 @@ a {
   .page-enter,
   .blink,
   .theme-toggle,
-  .btn {
+  .btn,
+  .liquid-orb {
     animation: none;
     transition: none;
   }

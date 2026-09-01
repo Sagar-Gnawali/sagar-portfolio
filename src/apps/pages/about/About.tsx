@@ -1,7 +1,9 @@
 import Container from "@components/container";
 import GridContainer from "@components/grid-container";
 import { EducationTimeLine } from "@components/education-timeline";
+import GlassPanel from "@components/glass";
 import {
+  backend,
   dataBase,
   otherTools,
   skills,
@@ -11,64 +13,52 @@ import {
 export default function About() {
   return (
     <Container>
-      <div>
-        <div className="mb-5">
-          <p className="text-3xl leading-1  ">Hi, I'm Sagar Gnawali</p>
-          <span className="font-light text-gray-600">
-            a Software Engineer trying to make the world a bit more functional.
-          </span>
-          🇳🇵
-        </div>
-        <p className="leading-1">
-          It&prime;s been 4 years of making computers do what I want. Sometimes
-          they listen, sometimes they don't... but we always figure it out.
+      <GlassPanel className="p-6 sm:p-8 mb-8">
+        <p className="text-3xl font-semibold tracking-tight">
+          Hi, I&apos;m Sagar Gnawali
         </p>
-        <p className="leading-1 mt-2">
-          Outside of convincing computers to work, I read books , go trekking,
+        <p className="muted mt-2">
+          a Software Engineer trying to make the world a bit more functional. 🇳🇵
+        </p>
+        <p className="mt-4 leading-relaxed">
+          It&apos;s been 4 years of making computers do what I want. Sometimes
+          they listen, sometimes they don&apos;t... but we always figure it out.
+        </p>
+        <p className="mt-3 leading-relaxed">
+          Outside of convincing computers to work, I read books, go trekking,
           and take photos. Check out my{" "}
           <a
-            className="text-blue-600"
             href="https://www.pexels.com/@sagar-gnawali-1389137/"
             target="_blank"
+            rel="noopener noreferrer"
           >
-            pexels profile
+            Pexels profile
           </a>{" "}
-          if you want to see what I do when I&prime;m not debugging.
+          if you want to see what I do when I&apos;m not debugging.
         </p>
-      </div>
-      {/* Skills Section */}
-      <div>
-        <p className="font-semibold  mt-10 capitalize">Skills</p>
-        <div className="px-1">
-          <GridContainer GridData={skills} />
-        </div>
-      </div>
+      </GlassPanel>
 
-      {/* Version Control*/}
-      <div>
-        <p className="font-semibold  mt-4 capitalize">Version Control</p>
-        <div className="px-1">
-          <GridContainer GridData={versionControl} />
-        </div>
+      <div className="mb-8">
+        <p className="font-semibold">Frontend</p>
+        <GridContainer GridData={skills} />
       </div>
-
-      {/* DataBase */}
-      <div>
-        <p className="font-semibold  mt-4 capitalize">Database</p>
-        <div className="px-1">
-          <GridContainer GridData={dataBase} />
-        </div>
+      <div className="mb-8">
+        <p className="font-semibold">Backend & APIs</p>
+        <GridContainer GridData={backend} />
       </div>
-      {/* Other Tools */}
-      <div>
-        <p className="font-semibold  mt-4 capitalize">Tools</p>
-        <div className="px-1">
-          <GridContainer GridData={otherTools} />
-        </div>
+      <div className="mb-8">
+        <p className="font-semibold">Version Control</p>
+        <GridContainer GridData={versionControl} />
       </div>
-      <div className="mt-5">
-        <EducationTimeLine />
+      <div className="mb-8">
+        <p className="font-semibold">Database</p>
+        <GridContainer GridData={dataBase} />
       </div>
+      <div className="mb-8">
+        <p className="font-semibold">Tools</p>
+        <GridContainer GridData={otherTools} />
+      </div>
+      <EducationTimeLine />
     </Container>
   );
 }

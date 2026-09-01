@@ -1,52 +1,63 @@
-type TimeLineProps = {
-  company: {
-    name: string;
-    duration: string;
-    role: string;
-  };
-  contribute: string[];
-};
+import type { WorkExperience } from "@constants/content";
+
+type TimeLineProps = WorkExperience;
+
 export default function TimeLine({
   company,
   contribute,
+  domains,
+  subsection,
+  stack,
 }: TimeLineProps) {
   return (
-    <>
-      <div className="flex gap-x-3 relative group rounded-lg hover:bg-gray-100 dark:hover:bg-grey/10">
-        {/* <a className="z-[1] absolute inset-0" href="#"></a> */}
-        <div className="relative last:after:hidden after:absolute after:top-0 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700 dark:group-hover:after:bg-neutral-600">
-          <div className="relative z-10 size-7 flex justify-center items-center">
-            <div className="size-2 rounded-full bg-white border-2 border-gray-300 group-hover:border-gray-600 dark:bg-neutral-800 dark:border-neutral-600 dark:group-hover:border-neutral-600"></div>
+    <article className="glass timeline-card">
+      <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-1">
+        <h3 className="text-lg font-semibold tracking-tight">{company.name}</h3>
+        <span className="muted text-sm">{company.duration}</span>
+      </div>
+      <p className="muted text-sm capitalize mb-3">{company.role}</p>
+      <ul className="list-disc pl-5 space-y-1.5 text-sm leading-relaxed">
+        {contribute.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+
+      {domains && domains.length > 0 ? (
+        <div className="mt-4 mb-3">
+          <p className="text-xs font-semibold uppercase tracking-wider muted mb-2">
+            Domains
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {domains.map((domain) => (
+              <span key={domain} className="domain-chip">
+                {domain}
+              </span>
+            ))}
           </div>
         </div>
-        <div className="grow p-2 pb-8">
-          <h3 className=" gap-x-1.5 font-medium text-gray-800 dark:text-black">
-            <div className="flex justify-between mb-1">
-              <span> {company.name}</span>
-              <span> {company.duration} </span>
-            </div>
-            <p className="text-xs font-medium capitalize text-gray-500 dark:text-neutral-00 flex justify-between">
-              <span> {company.role} </span>
-            </p>
-          </h3>
-          <button
-            type="button"
-            className="mt-1 -ms-1 p-1 relative z-10 inline-flex items-center gap-x-2 text-xs rounded-lg border border-transparent text-gray-500 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 "
-          >
-            <ul className="list-disc">
-              {
-                contribute.map((it, index) => {
-                  return (
-                    <li className="text-start" key={index}>
-                      {it}
-                    </li>
-                  );
-                })
-              }
-            </ul>
-          </button>
+      ) : null}
+
+      {subsection ? (
+        <div className="subsection">
+          <p className="text-sm font-semibold mb-1">{subsection.title}</p>
+          <p className="text-sm leading-relaxed muted">{subsection.description}</p>
         </div>
-      </div>
-    </>
+      ) : null}
+
+      {stack && stack.length > 0 ? (
+        <div className="mt-3 mb-4">
+          <p className="text-xs font-semibold uppercase tracking-wider muted mb-2">
+            Stack
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {stack.map((item) => (
+              <span key={item} className="stack-chip">
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+      ) : null}
+    </article>
   );
 }

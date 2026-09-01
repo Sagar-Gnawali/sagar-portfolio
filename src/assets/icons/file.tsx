@@ -10,6 +10,7 @@ export default function FileIcon() {
         y="0px"
         viewBox="0 0 100 100"
         className="w-5 h-6"
+        fill="currentColor"
        
       >
         <g>

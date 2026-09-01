@@ -1,26 +1,46 @@
 import Container from "@components/container";
+import GridContainer from "@components/grid-container";
+import GlassPanel from "@components/glass";
+import {
+  backend,
+  dataBase,
+  otherTools,
+  skills,
+  versionControl,
+} from "@constants/content";
 
 export default function Skills() {
   return (
     <Container>
-      <div className="">
-        <p className="text-6xl leading-1 mb-3">skills.</p>
-        <p className="leading-1">
-          I am a talented Software Engineer with expertise in frontend
-          development using React and TypeScript. I have a passion for building
-          high-quality applications that are both efficient and user-friendly. I
-          possess strong problem-solving skills, and I am always eager to learn
-          new technologies to stay ahead of the curve.
+      <GlassPanel className="p-6 sm:p-8 mb-8">
+        <p className="text-3xl font-semibold tracking-tight mb-3">Skills</p>
+        <p className="leading-relaxed">
+          I build product-facing interfaces and the services behind them —
+          React and TypeScript on the frontend, with Node.js, .NET Core, Python
+          / FastAPI, PHP, and GraphQL where the problem needs them.
         </p>
-        <p className="leading-1 mt-2">
-          In my free time, I enjoy reading books , write stories for picture I
-          have clicked. These interests allow me to decompress and clear my
-          mind, so I can come back to coding with a fresh perspective.
-        </p>
+      </GlassPanel>
 
-        <b>Frameworks</b>
-        <div></div>
-      </div>
+      <section className="mb-8">
+        <p className="font-semibold">Frontend</p>
+        <GridContainer GridData={skills} />
+      </section>
+      <section className="mb-8">
+        <p className="font-semibold">Backend & APIs</p>
+        <GridContainer GridData={backend} />
+      </section>
+      <section className="mb-8">
+        <p className="font-semibold">Database</p>
+        <GridContainer GridData={dataBase} />
+      </section>
+      <section className="mb-8">
+        <p className="font-semibold">Version Control</p>
+        <GridContainer GridData={versionControl} />
+      </section>
+      <section>
+        <p className="font-semibold">Tools</p>
+        <GridContainer GridData={otherTools} />
+      </section>
     </Container>
   );
 }

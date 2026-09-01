@@ -1,79 +1,21 @@
-import Container from '@components/container';
-import TimeLine from '@components/timeline';
+import Container from "@components/container";
+import TimeLine from "@components/timeline";
+import { workExperience } from "@constants/content";
+
 export default function Work() {
-  const workExperience = [
-    {
-      company: {
-        name: 'AdTecher',
-        duration: 'Jan 2026 - May 2026',
-        role: 'Founding Engineer',
-      },
-      contribute: [
-        'Developed modern React + TypeScript UIs for analytics dashboards and chat/briefing experiences, including reusable components, charts, onboarding flows, and stateful views.',
-        'Helped evolve project architecture using  domain-driven principles/architecture, organizing code into clear domain modules and shared core infrastructure.',
-      ],
-    },
-    {
-      company: {
-        name: 'Vynspire AI Labs',
-        duration: 'Aug 2025 - Nov 2025',
-        role: 'Software Engineer',
-      },
-      contribute: [
-        'Implemented payment gateway integrations (Stripe and PayPal) in a hotel booking platform, ensuring secure and seamless checkout experiences.',
-        'Built reusable components and modules for a hotel booking system using Next.js, improving code maintainability and development efficiency.',
-        'Managed multiple environments on AWS Amplify for a hotel booking system, ensuring smooth testing and deployment workflows across development and staging environments.',
-      ],
-    },
-    {
-      company: {
-        name: 'Fatdog Technology Pvt.',
-        duration: 'Aug 2024 - Mar 2025',
-        role: 'Frontend Developer',
-      },
-      contribute: [
-        'Build module in healthcare system to support dynamic forms for various diseases, improving flexibility and usability.',
-        'Worked on an e-commerce platform using Next.js to deliver a seamless shopping experience.',
-        'Worked on an e-commerce admin portal using Vue.js to streamline management tasks.',
-        'Worked on an online test booking portal using Next.js to simplify the booking process for users.',
-      ],
-    },
-    {
-      company: {
-        name: 'LogicaBeans Pvt. Ltd.',
-        duration: 'Oct 2021 - Jul 2024',
-        role: 'Software Engineer',
-      },
-      contribute: [
-        'Engaged as an offshore developer for a USA healthcare portal, focusing on implementing business rules using ReactJS, TypeScript, and GraphQL.',
-        'Involved in frontend development of multi-tenant healthcare portal systems using React JS and Typescript.',
-        'Contributed to Loan Management System development using Dot Net Core and React JS.',
-      ],
-    },
-    {
-      company: {
-        name: 'Influence | Target Solutions India',
-        duration: 'Jul 2021 - Sep 2021',
-        role: 'Software Engineer Trainee',
-      },
-      contribute: [
-        'Developed user interfaces using React JS.',
-        'Maintained/improved existing codebases while conducting peer code reviews.',
-      ],
-    },
-  ];
   return (
     <Container>
-      <div>
-        <p className='text-2xl leading-1 mb-3 capitalize ml-1'>experience</p>
-        {workExperience.map((it, index) => (
-          <TimeLine
-            key={index}
-            company={it.company}
-            contribute={it.contribute}
-          />
-        ))}
-      </div>
+      <p className="text-2xl font-semibold tracking-tight mb-5">Experience</p>
+      {workExperience.map((item) => (
+        <TimeLine
+          key={item.company.name}
+          company={item.company}
+          contribute={item.contribute}
+          domains={item.domains}
+          subsection={item.subsection}
+          stack={item.stack}
+        />
+      ))}
     </Container>
   );
 }

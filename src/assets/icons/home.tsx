@@ -6,6 +6,7 @@ export default function HomeIcon() {
         xmlns="http://www.w3.org/2000/svg"
         version="1.1"
         className="w-5 h-6"
+        fill="currentColor"
         viewBox="0 0 500 500"
       >
         <defs>

@@ -6,7 +6,6 @@ export default defineConfig({
   plugins: [react()],
   css: {
     postcss: {
-      // @ts-ignore
       plugins: [tailwindcss()],
     },
   },

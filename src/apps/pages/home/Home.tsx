@@ -6,6 +6,7 @@ import { socialLinks } from "@constants/content";
 
 export default function Home() {
   const navigation = useNavigate();
+
   const handleDownload = () => {
     const resumeUrl = "/sagar-gnawali.pdf";
     const link = document.createElement("a");
@@ -13,50 +14,44 @@ export default function Home() {
     link.download = "Sagar Gnawali.pdf";
     link.click();
   };
+
   return (
     <Container>
-      <div className="flex my-5 items-center self-center m-auto justify-center text-center ">
-        <div>
-          <div className="w-full flex justify-center items-center my-5">
-            <img
-              src={Profile}
-              alt="Profile-picture"
-              className="w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] object-cover object-center  rounded-full border-4 border-blue-400"
-            />
+      <div className="flex items-center justify-center text-center">
+        <div className="w-full">
+          <div className="profile-ring my-6">
+            <img src={Profile} alt="Sagar Gnawali" />
           </div>
-          <div className="text-4xl sm:text-5xl font-normal leading-tight">
-            <span className="bg-gradient-to-r from-blue-300 via-blue-400 to-blue-500 inline-block text-transparent bg-clip-text">
-              {" "}
+          <h1 className="text-4xl sm:text-5xl font-semibold leading-tight tracking-tight">
+            <span className="bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-400 inline-block text-transparent bg-clip-text">
               Software
             </span>{" "}
             Engineer, passionate
             <br />
-            <span>
-              about{" "}
-              <span className="bg-gradient-to-r leading-normal from-orange-300 via-orange-400 to-orange-500 inline-block text-transparent bg-clip-text">
-                photography
-              </span>{" "}
-              and{" "}
-              <span className="bg-gradient-to-r from-blue-300 via-orange-300 to-red-300 inline-block text-transparent bg-clip-text">
-                books.
-              </span>
+            about{" "}
+            <span className="bg-gradient-to-r from-orange-300 via-orange-400 to-orange-500 inline-block text-transparent bg-clip-text">
+              photography
+            </span>{" "}
+            and{" "}
+            <span className="bg-gradient-to-r from-sky-300 via-orange-300 to-rose-300 inline-block text-transparent bg-clip-text">
+              books.
             </span>
-          </div>
-          <div className="w-full mt-4 mb-6">
+          </h1>
+          <div className="w-full mt-6 mb-8">
             <SocialLink SocialData={socialLinks} />
           </div>
-          <div className="flex justify-center gap-5">
+          <div className="flex justify-center gap-3">
             <button
-              onClick={() => {
-                navigation("/about");
-              }}
-              className="px-4 py-2 capitalize bg-gray-500 text-white  rounded-lg  hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-75"
+              type="button"
+              onClick={() => navigation("/about")}
+              className="btn btn-primary"
             >
               About me
             </button>
             <button
+              type="button"
               onClick={handleDownload}
-              className="px-4 py-2 bg-white text-black border border-gray-500 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-black-600 focus:ring-opacity-75"
+              className="btn btn-ghost"
             >
               Resume
             </button>

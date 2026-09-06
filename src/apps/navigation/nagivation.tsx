@@ -9,6 +9,7 @@ import ThemeToggle from "@components/theme-toggle";
 const links = [
   { to: "/about", label: "About" },
   { to: "/work", label: "Work" },
+  { to: "/education", label: "Education" },
   { to: "/skills", label: "Skills" },
 ];
 
@@ -33,6 +34,7 @@ export default function Navigation() {
           <NavLink
             key={link.to}
             to={link.to}
+            end={link.to !== "/work" && link.to !== "/education"}
             className={({ isActive }) =>
               `nav-link${isActive ? " is-active" : ""}`
             }
